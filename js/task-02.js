@@ -2,7 +2,9 @@ import users from "./users.js";
 
 const getUsersWithEyeColor = (users, color) => {
   const usersEyeColor = users.filter(function (user) {
-    return user.eyeColor === "blue";
+    if(color === user.eyeColor) {
+      return user;
+    }
   });
 
   return usersEyeColor;
