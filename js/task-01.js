@@ -1,8 +1,11 @@
-import users from "./users.js"
+import users from "./users.js";
 
-const getUserNames = users => {
-    // твой код
-  };
-  
-  console.log(getUserNames(users));
-  // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+const getUserNames = (users) => {
+  const userNames = users.map(function (user) {
+    return user.name;
+  });
+
+  return userNames;
+};
+
+console.log(getUserNames(users));
