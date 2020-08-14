@@ -7,14 +7,10 @@ const getSortedUniqueSkills = (users) => {
     return skills;
   }, []);
 
-  const uniqueSkills = allSkills
-    .reduce(function (originalSkills, skills) {
-      if (!originalSkills.includes(skills)) {
-        originalSkills.push(skills);
-      }
-
-      return originalSkills;
-    }, [])
+  const uniqueSkills = allSkills.filter(function (element, index, array) {
+      console.log(element)
+      return element === 'lorem';
+    })
     .sort();
 
   return uniqueSkills;
