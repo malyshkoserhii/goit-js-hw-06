@@ -3,9 +3,7 @@ import users from "./users.js";
 const getUsersWithFriend = (users, friendName) => {
   const userFriends = users
     .filter(function (user) {
-      if (user.friends.includes(friendName)) {
-        return user;
-      }
+      return user.friends.includes(friendName);
     })
     .map(function (user) {
       return user.name;
