@@ -8,8 +8,7 @@ const getSortedUniqueSkills = (users) => {
   }, []);
 
   const uniqueSkills = allSkills.filter(function (element, index, array) {
-      console.log(element)
-      return element === 'lorem';
+      return array.indexOf(element) === index;
     })
     .sort();
 
